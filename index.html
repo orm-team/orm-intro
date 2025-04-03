@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오름 소개 페이지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #333333;
+        line-height: 1.6;
+      }
+
+      .hero {
+        height: 100vh;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin-bottom: 30px;
+      }
+
+      .app-store-button {
+        display: inline-block;
+        background-color: #3c9b70;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: background-color 0.3s;
+      }
+
+      .app-store-button:hover {
+        background-color: #3c8a70;
+      }
+
+      .feature-section {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .feature-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 100px;
+      }
+
+      .feature-container:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .feature-image {
+        flex: 1;
+        text-align: center;
+      }
+
+      .feature-image img {
+        max-width: 300px;
+        border-radius: 36px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-text {
+        flex: 1;
+        padding: 0 40px;
+      }
+
+      .feature-text h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #3c9b70;
+      }
+
+      .feature-text p {
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      .cta-section {
+        text-align: center;
+        padding: 80px 20px;
+        background-color: #f8f9fa;
+      }
+
+      .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      .orm {
+        color: #3c9b70;
+      }
+
+      @media (max-width: 768px) {
+        .feature-container,
+        .feature-container:nth-child(even) {
+          flex-direction: column;
+        }
+
+        .feature-text {
+          padding: 30px 0;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+      <h1>등산 종합 플랫폼 <span class="orm">오름</span></h1>
+      <p>
+        전국의 등산 정보를 확인하고 발자국을 남겨보세요. <br />등산을 사랑하는
+        사람을 위한 애플리케이션입니다.
+      </p>
+      <a href="#" class="app-store-button">앱스토어에서 다운로드</a>
+    </section>
+
+    <!-- 피처 섹션 -->
+    <section class="feature-section">
+      <div class="feature-container">
+        <div class="feature-image">
+          <img src="./res/temp.png" alt="앱 스크린샷 1" />
+        </div>
+        <div class="feature-text">
+          <h2>대한민국 3,368개의 산 정보 제공</h2>
+          <p>전국에 존재하는 모든 산들의 정보를 살펴보세요.</p>
+          <p>지역과 고도를 설정하여 취향에 맞는 산을 찾아볼 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="feature-container">
+        <div class="feature-image">
+          <img src="./res/temp.png" alt="앱 스크린샷 2" />
+        </div>
+        <div class="feature-text">
+          <h2>다양한 기능</h2>
+          <p>
+            일상생활에 필요한 모든 기능을 한 앱에서 만나보세요. 시간 관리부터
+            건강 관리까지 다양한 기능을 제공합니다.
+          </p>
+          <p>지속적인 업데이트로 더 많은 기능이 추가됩니다.</p>
+        </div>
+      </div>
+
+      <div class="feature-container">
+        <div class="feature-image">
+          <img src="./res/temp.png" alt="앱 스크린샷 3" />
+        </div>
+        <div class="feature-text">
+          <h2>개인 맞춤형 경험</h2>
+          <p>사용자의 습관과 선호도를 학습하여 개인화된 경험을 제공합니다.</p>
+          <p>
+            자신만의 스타일로 앱을 커스터마이징하고 더 효율적으로 사용하세요.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="cta-section">
+      <h2>지금 바로 경험해보세요</h2>
+      <p>수많은 사용자들이 이미 경험하고 있습니다.</p>
+      <br />
+      <a href="#" class="app-store-button">앱스토어에서 다운로드</a>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+      <p>&copy; 2025 orm-team. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
