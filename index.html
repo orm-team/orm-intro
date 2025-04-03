@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>오름 소개 페이지</title>
+    <link rel="icon" href="./res/orm_icon.jpg" type="image/jpg" />
+    <meta property="og:site_name" content="오름" />
+    <meta property="og:title" content="오름 - 등산 종합 플랫폼" />
+    <meta
+      property="og:description"
+      content="전국의 등산 정보를 확인하고 발자국을 남겨보세요. 등산을 사랑하는 사람을 위한 애플리케이션입니다."
+    />
+    <meta
+      name="description"
+      content="전국 3,368개 산 정보, 등산 기록, 명산산 추천까지 - 등산 종합 플랫폼 오름"
+    />
+    <title>오름 - 등산 종합 플랫폼</title>
     <style>
       * {
         margin: 0;
@@ -19,14 +30,37 @@
       }
 
       .hero {
+        position: relative;
         height: 100vh;
-        background-color: #f8f9fa;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         padding: 20px;
+      }
+
+      .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.06),
+            rgba(0, 0, 0, 0.06)
+          ),
+          url("./res/orm_trace.svg");
+        background-size: 320%; /* 확대 */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #f8f9fa;
+        z-index: 1; /* 배경을 콘텐츠 뒤로 */
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2; /* 콘텐츠를 배경 위로 */
       }
 
       .hero h1 {
@@ -142,12 +176,15 @@
   <body>
     <!-- 히어로 섹션 -->
     <section class="hero">
-      <h1>등산 종합 플랫폼 <span class="orm">오름</span></h1>
-      <p>
-        전국의 등산 정보를 확인하고 발자국을 남겨보세요. <br />등산을 사랑하는
-        사람을 위한 애플리케이션입니다.
-      </p>
-      <a href="#" class="app-store-button">앱스토어에서 다운로드</a>
+      <div class="hero-background"></div>
+      <div class="hero-content">
+        <h1>등산 종합 플랫폼 <span class="orm">오름</span></h1>
+        <p>
+          전국의 등산 정보를 확인하고 발자국을 남겨보세요. <br />
+          등산을 사랑하는 사람을 위한 애플리케이션입니다.
+        </p>
+        <a href="#" class="app-store-button">앱스토어에서 다운로드</a>
+      </div>
     </section>
 
     <!-- 피처 섹션 -->
@@ -157,7 +194,7 @@
           <img src="./res/temp.png" alt="앱 스크린샷 1" />
         </div>
         <div class="feature-text">
-          <h2>대한민국 3,368개의 산 정보 제공</h2>
+          <h2>3,368개의 산 정보</h2>
           <p>전국에 존재하는 모든 산들의 정보를 살펴보세요.</p>
           <p>지역과 고도를 설정하여 취향에 맞는 산을 찾아볼 수 있습니다.</p>
         </div>
@@ -168,12 +205,9 @@
           <img src="./res/temp.png" alt="앱 스크린샷 2" />
         </div>
         <div class="feature-text">
-          <h2>다양한 기능</h2>
-          <p>
-            일상생활에 필요한 모든 기능을 한 앱에서 만나보세요. 시간 관리부터
-            건강 관리까지 다양한 기능을 제공합니다.
-          </p>
-          <p>지속적인 업데이트로 더 많은 기능이 추가됩니다.</p>
+          <h2>알고리즘을 적용한 등산로</h2>
+          <p>오름만의 알고리즘으로 각 산의 등산로를 제공합니다.</p>
+          <p>원하는 등산로를 골라 정상에 도달해보세요.</p>
         </div>
       </div>
 
@@ -182,11 +216,22 @@
           <img src="./res/temp.png" alt="앱 스크린샷 3" />
         </div>
         <div class="feature-text">
-          <h2>개인 맞춤형 경험</h2>
-          <p>사용자의 습관과 선호도를 학습하여 개인화된 경험을 제공합니다.</p>
+          <h2>등산 정보를 기록하는 발자국</h2>
           <p>
-            자신만의 스타일로 앱을 커스터마이징하고 더 효율적으로 사용하세요.
+            실시간 위치정보를 파악해 사용자의 현재 위치와 고도를 추적합니다.
           </p>
+          <p>본인의 등산로를 참고하며 따라가세요.</p>
+        </div>
+      </div>
+
+      <div class="feature-container">
+        <div class="feature-image">
+          <img src="./res/temp.png" alt="앱 스크린샷 4" />
+        </div>
+        <div class="feature-text">
+          <h2>발자국 기록을 조회</h2>
+          <p>측정이 완료된 발자국을 통해 누적된 정보를 확인할 수 있습니다.</p>
+          <p>고도 그래프와 지나온 경로 지도를 확인하세요.</p>
         </div>
       </div>
     </section>
@@ -194,7 +239,7 @@
     <!-- CTA 섹션 -->
     <section class="cta-section">
       <h2>지금 바로 경험해보세요</h2>
-      <p>수많은 사용자들이 이미 경험하고 있습니다.</p>
+      <p>좋은 건강을 꿈꾸는 당신을 기다리고 있습니다.</p>
       <br />
       <a href="#" class="app-store-button">앱스토어에서 다운로드</a>
     </section>
